@@ -1,0 +1,21 @@
+<%- include('partials/header') -%>
+
+<div class="container mt-5 w-50">
+
+    <h2 class="mb-4">Update Book Data</h2>
+
+    <form action="/edit/<%= book.id %>?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        
+        <input type="text" value="<%= book.title %>" name="title" class="form-control" placeholder="Book Title">
+
+        <input type="text" value="<%= book.name %>" name="name" class="form-control" placeholder="Book Name">
+
+        <input type="text" value="<%= book.isbn %>" name="isbn" class="form-control" placeholder="Book ISBN">
+
+        <button type="submit" class="btn btn-danger btn-block mt-3">Update Book</button>
+
+    </form>
+</div>
+
+<%- include('partials/footer') -%>

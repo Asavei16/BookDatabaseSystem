@@ -1,0 +1,17 @@
+<%- include('partials/header') -%>
+<div class="container mt-5 w-50">
+
+    <h2 class="mb-4">Add New Book</h2>
+
+    <form action="/book/new" method="POST">
+        <input type="text" name="title" class="form-control" placeholder="Book Title">
+
+        <input type="text" name="name" class="form-control" placeholder="Book Name">
+
+        <input type="text" name="isbn" class="form-control" placeholder="Book ISBN">
+
+        <button type="submit" class="btn btn-danger btn-block mt-3">Add to Database</button>
+
+    </form>
+</div>
+<%- include('partials/footer') -%>
