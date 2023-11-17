@@ -6,25 +6,17 @@
         <thead>
             <tr>
                 <th>Title</th>
-                <th>Name</th>
+                <th>Author</th>
                 <th>ISBN</th>
                 <th>Operations</th>
             </tr>
         </thead>
-        <tfoot>
-            <tr>
-                <th>Title</th>
-                <th>Name</th>
-                <th>ISBN</th>
-                <th>Operations</th>
-            </tr>
-        </tfoot>
         <tbody>
             <% books.forEach((book)=> { %>
                     <tr>
                         <td><%= book.title %></td>
-                        <td><%= book.name %></td>
-                        <td>$<%= book.isbn %></td>
+                        <td><%= book.author %></td>
+                        <td><%= book.isbn %></td>
                         <td>
                             <a class="btn btn-primary" href="/edit/<%= book.id %>">Edit</a>
                             <form style="display: inline;" action="/delete/<%= book.id %>?_method=DELETE" method="POST">

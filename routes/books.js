@@ -60,7 +60,7 @@ router.get('/edit/:id', (req, res)=> {
 router.post('/book/new', (req,res)=> {
     let newBook = {
         title : req.body.title,
-        name : req.body.name,
+        author : req.body.author,
         isbn : req.body.isbn
     };
 
@@ -84,7 +84,7 @@ router.put('/edit/:id', (req, res)=> {
 
     Book.updateOne(searchQuery, {$set: {
         title : req.body.title,
-        name : req.body.name,
+        author : req.body.author,
         isbn : req.body.isbn
     }})
     .then(book => {
