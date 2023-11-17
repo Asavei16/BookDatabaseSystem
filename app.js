@@ -19,11 +19,14 @@ dotenv.config({path : './config.env'});
 //     useUnifiedTopology : true
 //     // useCreateIndex: true
 // });
-mongoose.connect(process.env.DATABASE_LOCAL);
-// , {
+// mongoose.connect("mongodb://127.0.0.1:27017/books", {
 //     useNewUrlParser : true,
 //     useUnifiedTopology : true
+//     // useCreateIndex: true
 // });
+// mongoose.connect(process.env.DATABASE_LOCAL);
+mongoose.connect("mongodb://127.0.0.1:27017/books");
+
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('views', path.join(__dirname, 'views'));
